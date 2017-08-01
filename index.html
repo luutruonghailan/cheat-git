@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Git Cheat Sheet by zendvn.com</title>
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	
+	<div class="container">
+		
+    	<h1 class="text-center">Git Cheat Sheet by zendvn.com</h1>
+    	<div class="row">
+			<!-- LOCAL REPO : START -->
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Local Repo</h3>
+					<div class="pull-right">
+						<span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+							<i class="glyphicon glyphicon-filter"></i>
+						</span>
+					</div>
+				</div>
+				<div class="panel-body">
+					<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#local-table" placeholder="Filter Developers" />
+				</div>
+				<table class="table table-hover" id="local-table">
+					<thead>
+						<tr>
+							<th width="3%">#</th>
+							<th width="30%">Command</th>
+							<th width="60%">Description</th>
+							<th width="7%">Example</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr>
+							<td>1</td>
+							<td><strong>git init</strong></td>
+							<td>Khởi tạo một Local Repository</td>
+							<td>...</td>
+						</tr>
+						
+						<tr>
+							<td>2</td>
+							<td><strong>git status</strong></td>
+							<td>Kiểm tra trạng thái các files của repository</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>3</td>
+							<td><strong>git add</strong> <i>fileName</i></td>
+							<td>Thêm <strong>fileName</strong> vào trạng thái Staged</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>4</td>
+							<td><strong>git add</strong> <i>*</i></td>
+							<td>Thêm tất cả tập tin ở trạng thái Working vào trạng thái Staged</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>5</td>
+							<td><strong>git commit --m</strong> <i>“Message”</i></td>
+							<td>Commit files nằm trong trạng thái Staged kèm theo thông điệp <strong>“Message”</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>6</td>
+							<td><strong>git commit -a --m</strong> <i>“Message”</i></td>
+							<td>Commit files đã hoặc chưa nằm trong trạng thái Staged kèm theo thông điệp <strong>“Message”</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>7</td>
+							<td><strong>git log</strong></td>
+							<td>Xem log các commit trong Repository (tham khảo thêm các param)</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>8</td>
+							<td><strong>git reset HEAD</strong> <i>filename</i></td>
+							<td>Xóa <strong>fileName</strong> ra khỏi trạng thái Staged (file vẫn còn tồn tại)</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>9</td>
+							<td><strong>git rm --f </strong> <i>filename</i></td>
+							<td>Xóa <strong>fileName</strong> ra khỏi trạng thái Staged và xóa khỏi ổ cứng (file không còn tồn tại)</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>10</td>
+							<td><strong>git rm --cached </strong> <i>filename</i></td>
+							<td>Xóa <strong>fileName</strong> ra khỏi trạng thái Staged (file vẫn còn tồn tại)</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>11</td>
+							<td><strong>git checkout </strong> <i>-- filename</i></td>
+							<td>Quay về trạng thái trước của tập tin <strong>filename</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>12</td>
+							<td><strong>git mv </strong> <i>fileName1 fileName2</i></td>
+							<td>Đổi tên <strong>fileName1</strong> thành <strong>fileName2</strong> </td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>13</td>
+							<td><strong>git commit --amend</strong> </td>
+							<td>Nhập 1 commit về commit trước đó</td>
+							<td>...</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- LOCAL REPO : END -->
+			
+			<!-- REMOTE REPO : START -->
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Remote Repo</h3>
+					<div class="pull-right">
+						<span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+							<i class="glyphicon glyphicon-filter"></i>
+						</span>
+					</div>
+				</div>
+				<div class="panel-body">
+					<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#remote-table" placeholder="Filter Developers" />
+				</div>
+				<table class="table table-hover" id="remote-table">
+					<thead>
+						<tr>
+							<th width="3%">#</th>
+							<th width="30%">Command</th>
+							<th width="60%">Description</th>
+							<th width="7%">Example</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr>
+							<td>1</td>
+							<td><strong>git clone repository </strong><i> [directory]</i></td>
+							<td>Clone Remote Teposity <strong>reposity</strong> và đặt vào folder <strong>[directory]</strong></td>
+							<td>...</td>
+						</tr>
+						
+						<tr>
+							<td>2</td>
+							<td><strong>git remote –v</strong></td>
+							<td>Xem thông tin Remote reposity hiện tại</td>
+							<td>...</td>
+						</tr>
+						
+						<tr>
+							<td>3</td>
+							<td><strong>git remote show </strong><i>name</i></td>
+							<td>Xem thông tin <strong>name</strong> hiện tại</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>4</td>
+							<td><strong>git remote add </strong><i>name repository</i></td>
+							<td>Add Local Repository lên Remote Repository tại <strong>repository</strong> và đặt tên nó là <strong>name</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>5</td>
+							<td><strong>git remote rename </strong><i>name1 name2</i></td>
+							<td>Đổi tên <strong>name1</strong> thành <strong>name2</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>6</td>
+							<td><strong>git remote remove </strong><i>name</i></td>
+							<td>Xóa remote <strong>name</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>7</td>
+							<td><strong>git pull </strong><i>name branch</i></td>
+							<td>Kiểm tra sự thay đổi trên Remote Repository và merge vào phiên làm việc hiện tại</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>8</td>
+							<td><strong>git push </strong><i>name branch</i></td>
+							<td>Đẩy dữ liệu lên remote repository</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>9</td>
+							<td><strong>git config --global.config </strong><i>alias.st status</i></td>
+							<td>Tạo alias</td>
+							<td>...</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- REMOTE REPO : END -->
+
+			<!-- BRANCH : START -->
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Branch</h3>
+					<div class="pull-right">
+						<span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+							<i class="glyphicon glyphicon-filter"></i>
+						</span>
+					</div>
+				</div>
+				<div class="panel-body">
+					<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#branch-table" placeholder="Filter Developers" />
+				</div>
+				<table class="table table-hover" id="branch-table">
+					<thead>
+						<tr>
+							<th width="3%">#</th>
+							<th width="30%">Command</th>
+							<th width="60%">Description</th>
+							<th width="7%">Example</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr>
+							<td>1</td>
+							<td><strong>git branch</strong><i> branchname</i></td>
+							<td>Tạo nhánh mới có tên <strong>branchname</strong> </td>
+							<td>...</td>
+						</tr>
+						
+						<tr>
+							<td>2</td>
+							<td><strong>git log --oneline --decorate</strong></td>
+							<td>Xem đang làm việc với nhánh nào</td>
+							<td>...</td>
+						</tr>
+						
+						<tr>
+							<td>3</td>
+							<td><strong>git checkout</strong><i> branchname</i></td>
+							<td>Chuyển làm việc sang nhánh <strong>branchname</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>4</td>
+							<td><strong>git branch</strong></td>
+							<td>Xem danh sách các nhánh, nhánh nào có dấu * là nhánh chúng ta đang làm việc</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>5</td>
+							<td><strong>git branch -v</strong></td>
+							<td>Xem commit mới nhất ở mỗi nhánh</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>6</td>
+							<td><strong>git merge </strong><i> branchname</i></td>
+							<td>Merge nhánh hiện tại với nhánh<strong> branchname</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>7</td>
+							<td><strong>git branch </strong><i>--merged</i></td>
+							<td>Xem danh sách các nhánh đã merge </td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>8</td>
+							<td><strong>git branch </strong><i>--no-merged</i></td>
+							<td>Xem danh sách các nhánh chưa được merge</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>9</td>
+							<td><strong>git branch -d </strong><i>branchname</i></td>
+							<td>Xóa nhánh <strong>branchname</strong> và nhánh này <strong>đã được merge</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>10</td>
+							<td><strong>git branch -D </strong><i>branchname</i></td>
+							<td>Xóa nhánh <strong>branchname</strong> và nhánh này <strong>chưa được merge</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>11</td>
+							<td><strong>git tag </strong><i>tagname</i></td>
+							<td>Tạo mới một Lightweight Tag có tên là <strong>tagname</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>12</td>
+							<td><strong>git tag </strong><i>-a tagname -m “Mesage”</i></td>
+							<td>Tạo mới một Annotated Tag có tên là <strong>tagname</strong> cùng với thông điệp</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>13</td>
+							<td><strong>git tag </strong></td>
+							<td>Xem tất cả các tag hiện có</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>13</td>
+							<td><strong>git tag </strong> <i>-n</i></td>
+							<td>Xem tất cả các tag hiện có và phần miêu tả của task</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>14</td>
+							<td><strong>git show tagname</strong></td>
+							<td>Xem thông tin <strong>tagname</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>15</td>
+							<td><strong>git tag –d </strong><i>tagname</i></td>
+							<td>Xóa tag có tên <strong>tagname</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>16</td>
+							<td><strong>git tag -a tagname X </strong><i>-m message</i></td>
+							<td>Thêm annotated tag <strong>tagname</strong> vào commit có ID là X</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>17</td>
+							<td><strong>git checkout –b branchname tagname</strong></td>
+							<td>Tạo một nhánh mới <strong>branchname</strong> từ tag đã tồn tại <strong>tagname</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>18</td>
+							<td><strong>git push name tagname</strong></td>
+							<td>Thêm <strong>tagname</strong> vào remote <strong>name</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>19</td>
+							<td><strong>git push name --tags</strong></td>
+							<td>Thêm tất cả tag vào remote <strong>name</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>20</td>
+							<td><strong>git push name -d tagname</strong></td>
+							<td>Xóa <strong>tagname</strong> tại Remote repository có tên <strong>name</strong></td>
+							<td>...</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- BRANCH : END -->
+		</div>
+	</div>
+
+	<footer>
+		Git Cheat Sheet by zendvn.com
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>

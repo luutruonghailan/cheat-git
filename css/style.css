@@ -1,0 +1,29 @@
+body {
+    font-size: 16px;
+}
+
+.row{
+    margin-top:40px;
+    padding: 0 10px;
+}
+.clickable{
+    cursor: pointer;   
+}
+
+.panel-heading div {
+	margin-top: -18px;
+	font-size: 15px;
+}
+.panel-heading div span{
+	margin-left:5px;
+}
+.panel-body{
+	display: none;
+}
+
+footer {
+	padding: 20px;
+	background: #444141;
+	color: #fff;
+	margin-top: 40px;
+}
