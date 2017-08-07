@@ -27,3 +27,10 @@ footer {
 	color: #fff;
 	margin-top: 40px;
 }
+
+td.subtopic {
+	background-color: #D3FBE8;
+	font-weight: bold;
+	color:#F43011;
+
+}

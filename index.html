@@ -256,6 +256,11 @@
 						</tr>
 					</thead>
 					<tbody>
+						<!-- BRANCH : START -->
+						<tr>
+							<td colspan="4" class="subtopic">BRANCH</td>
+						</tr>
+
 
 						<tr>
 							<td>1</td>
@@ -277,160 +282,197 @@
 							<td>Chuyển làm việc sang nhánh <strong>branchname</strong></td>
 							<td>...</td>
 						</tr>
-
 						<tr>
 							<td>4</td>
+							<td><strong>git checkout -b</strong><i> branchname</i></td>
+							<td>Tạo nhánh  <strong>branchname</strong> và chuyển làm việc sang nhánh <strong>branchname</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>5</td>
 							<td><strong>git branch</strong></td>
 							<td>Xem danh sách các nhánh, nhánh nào có dấu * là nhánh chúng ta đang làm việc</td>
 							<td>...</td>
 						</tr>
 
 						<tr>
-							<td>5</td>
+							<td>6</td>
 							<td><strong>git branch -v</strong></td>
 							<td>Xem commit mới nhất ở mỗi nhánh</td>
 							<td>...</td>
 						</tr>
 
 						<tr>
-							<td>6</td>
+							<td>7</td>
 							<td><strong>git merge </strong><i> branchname</i></td>
 							<td>Merge nhánh hiện tại với nhánh<strong> branchname</strong></td>
 							<td>...</td>
 						</tr>
 
 						<tr>
-							<td>7</td>
+							<td>8</td>
 							<td><strong>git branch </strong><i>--merged</i></td>
 							<td>Xem danh sách các nhánh đã merge </td>
 							<td>...</td>
 						</tr>
 
 						<tr>
-							<td>8</td>
+							<td>9</td>
 							<td><strong>git branch </strong><i>--no-merged</i></td>
 							<td>Xem danh sách các nhánh chưa được merge</td>
 							<td>...</td>
 						</tr>
 
 						<tr>
-							<td>9</td>
+							<td>10</td>
 							<td><strong>git branch -d </strong><i>branchname</i></td>
 							<td>Xóa nhánh <strong>branchname</strong> và nhánh này <strong>đã được merge</strong></td>
 							<td>...</td>
 						</tr>
 
 						<tr>
-							<td>10</td>
+							<td>11</td>
 							<td><strong>git branch -D </strong><i>branchname</i></td>
 							<td>Xóa nhánh <strong>branchname</strong> và nhánh này <strong>chưa được merge</strong></td>
 							<td>...</td>
 						</tr>
-
+						<!-- BRANCH : END -->
+						
+						<!-- TAG : START -->
 						<tr>
-							<td>11</td>
+							<td colspan="4" class="subtopic">TAG</td>
+						</tr>
+						<tr>
+							<td>12</td>
 							<td><strong>git tag </strong><i>tagname</i></td>
 							<td>Tạo mới một Lightweight Tag có tên là <strong>tagname</strong></td>
 							<td>...</td>
 						</tr>
 
 						<tr>
-							<td>12</td>
+							<td>13</td>
 							<td><strong>git tag </strong><i>-a tagname -m “Mesage”</i></td>
 							<td>Tạo mới một Annotated Tag có tên là <strong>tagname</strong> cùng với thông điệp</td>
 							<td>...</td>
 						</tr>
 
 						<tr>
-							<td>13</td>
+							<td>14</td>
 							<td><strong>git tag </strong></td>
 							<td>Xem tất cả các tag hiện có</td>
 							<td>...</td>
 						</tr>
 
 						<tr>
-							<td>13</td>
+							<td>15</td>
 							<td><strong>git tag </strong> <i>-n</i></td>
 							<td>Xem tất cả các tag hiện có và phần miêu tả của task</td>
 							<td>...</td>
 						</tr>
 
 						<tr>
-							<td>14</td>
+							<td>16</td>
 							<td><strong>git show tagname</strong></td>
 							<td>Xem thông tin <strong>tagname</strong></td>
 							<td>...</td>
 						</tr>
 
 						<tr>
-							<td>15</td>
+							<td>17</td>
 							<td><strong>git tag –d </strong><i>tagname</i></td>
 							<td>Xóa tag có tên <strong>tagname</strong></td>
 							<td>...</td>
 						</tr>
 
 						<tr>
-							<td>16</td>
+							<td>18</td>
 							<td><strong>git tag -a tagname X </strong><i>-m message</i></td>
 							<td>Thêm annotated tag <strong>tagname</strong> vào commit có ID là X</td>
 							<td>...</td>
 						</tr>
-
+						
 						<tr>
-							<td>17</td>
+							<td>19</td>
 							<td><strong>git checkout –b branchname tagname</strong></td>
 							<td>Tạo một nhánh mới <strong>branchname</strong> từ tag đã tồn tại <strong>tagname</strong></td>
 							<td>...</td>
 						</tr>
-
+					
 						<tr>
-							<td>18</td>
+							<td>20</td>
 							<td><strong>git push name tagname</strong></td>
 							<td>Thêm <strong>tagname</strong> vào remote <strong>name</strong></td>
 							<td>...</td>
 						</tr>
 
 						<tr>
-							<td>19</td>
+							<td>21</td>
 							<td><strong>git push name --tags</strong></td>
 							<td>Thêm tất cả tag vào remote <strong>name</strong></td>
 							<td>...</td>
 						</tr>
 
 						<tr>
-							<td>20</td>
+							<td>22</td>
 							<td><strong>git push name -d tagname</strong></td>
 							<td>Xóa <strong>tagname</strong> tại Remote repository có tên <strong>name</strong></td>
 							<td>...</td>
 						</tr>
-						
+						<!-- TAG : END -->
+
+						<!-- REMOTE BRANCH : START -->
 						<tr>
-							<td>21</td>
-							<td><strong>git remote push </strong> <i>branch_name</i></td>
+							<td colspan="4" class="subtopic">REMOTE BRANCH</td>
+						</tr>
+						<tr>
+							<td>23</td>
+							<td><strong>git remote push </strong> <i>remote_name branch_name</i></td>
 							<td>Đẩy nhánh <strong>branch_name</strong> từ Local Repo lên Remote Repo</td>
 							<td>...</td>
 						</tr>
 						
 						<tr>
-							<td>22</td>
+							<td>24</td>
 							<td><strong>git remote show </strong> <i>remote_name</i></td>
 							<td>Xem danh sách các nhánh trên Remote Repo</td>
 							<td>...</td>
 						</tr>
+
+						<tr>
+							<td>25</td>
+							<td><strong>git ls-remote  </strong> <i>remote_name</i></td>
+							<td>Xem danh sách các nhánh và tag trên Remote Repo</td>
+							<td>...</td>
+						</tr>
 						
 						<tr>
-							<td>23</td>
+							<td>26</td>
 							<td><strong>git clone -b </strong> <i>branch remote_url</i></td>
 							<td>Clone một Branch chỉ định từ Remote repo</td>
 							<td>...</td>
 						</tr>
+
+						<tr>
+							<td>27</td>
+							<td><strong>git checkout </strong> <i>remote_name/branch_name</i></td>
+							<td>Chuyển đổi làm việc sang nhánh remote</td>
+							<td>...</td>
+						</tr>
 						
 						<tr>
-							<td>24</td>
+							<td>28</td>
 							<td><strong>git push origin :</strong><i>branch_name</i></td>
 							<td>Xóa một Branch từ Remote repo</td>
 							<td>...</td>
 						</tr>
+						<!-- REMOTE BRANCH : END -->
+
+						<!-- REBASE : START -->
+						<tr>
+							<td colspan="4" class="subtopic">REBASE</td>
+						</tr>
+
 					</tbody>
 				</table>
 			</div>
