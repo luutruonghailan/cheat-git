@@ -337,6 +337,27 @@
 							<td>Xóa nhánh <strong>branchname</strong> và nhánh này <strong>chưa được merge</strong></td>
 							<td>...</td>
 						</tr>
+
+						<tr>
+							<td>12</td>
+							<td><strong>git branch -D </strong><i>branchname</i></td>
+							<td>Xóa nhánh <strong>branchname</strong> và nhánh này <strong>chưa được merge</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>13</td>
+							<td><strong>git branch -m </strong><i>oldname newname</i></td>
+							<td>Thực hiện việc đổi tên nhánh từ <strong>oldename<strong> thành </strong>newname</strong></td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>14</td>
+							<td><strong>git branch -m </strong><i>newname</i></td>
+							<td>Đổi tên nhánh hiện tại thành </strong>newname</strong></td>
+							<td>...</td>
+						</tr>
 						<!-- BRANCH : END -->
 						
 						<!-- TAG : START -->
@@ -354,6 +375,13 @@
 							<td>13</td>
 							<td><strong>git tag </strong><i>-a tagname -m “Mesage”</i></td>
 							<td>Tạo mới một Annotated Tag có tên là <strong>tagname</strong> cùng với thông điệp</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>13</td>
+							<td><strong>git tag </strong><i>-a tagname commitID -m “Mesage”</i></td>
+							<td>Thêm annotated tag có tên <strong>tagname</strong> vào commit có ID là <strong>commitID</strong></td>
 							<td>...</td>
 						</tr>
 
@@ -472,6 +500,13 @@
 						<tr>
 							<td colspan="4" class="subtopic">REBASE</td>
 						</tr>
+						<tr>
+							<td>29</td>
+							<td>git rebase <strong>branch_name</strong></td>
+							<td>Chạy lại lịch sử commit của branch_name trên nhánh hiện tại</td>
+							<td>...</td>
+						</tr>
+						
 
 					</tbody>
 				</table>
