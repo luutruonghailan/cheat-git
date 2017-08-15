@@ -506,7 +506,148 @@
 							<td>Chạy lại lịch sử commit của branch_name trên nhánh hiện tại</td>
 							<td>...</td>
 						</tr>
+
+					</tbody>
+				</table>
+			</div>
+			<!-- BRANCH : END -->
+
+			<!-- CONFLICT : START -->
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Conflict</h3>
+					<div class="pull-right">
+						<span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+							<i class="glyphicon glyphicon-filter"></i>
+						</span>
+					</div>
+				</div>
+				<div class="panel-body">
+					<input type="text" class="form-control" id="dev-table-conflict" data-action="filter" data-filters="#conflict-table" placeholder="Filter Developers" />
+				</div>
+				<table class="table table-hover" id="conflict-table">
+					<thead>
+						<tr>
+							<th width="3%">#</th>
+							<th width="30%">Command</th>
+							<th width="60%">Description</th>
+							<th width="7%">Example</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- COMPARISONS : START -->
+						<tr>
+							<td colspan="4" class="subtopic">COMPARISONS</td>
+						</tr>
+
+						<tr>
+							<td>1</td>
+							<td><strong>git diff <br>git difftool</strong></td>
+							<td>Staging vs Working (L-R)</td>
+							<td>...</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td><strong>git diff HEAD</td>
+							<td>Local Repo vs Working (L-R)</td>
+							<td>...</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td><strong>git diff --staged HEAD<br>git diff –cached</strong></td>
+							<td>Local Repo vs Staging Area (L-R)</td>
+							<td>...</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td><strong>git diff master origin/master</strong></td>
+							<td>Local Repo vs Remote Repo (L-R)</td>
+							<td>...</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td><strong>git diff comitID commitID</strong></td>
+							<td>Comit vs Commit</td>
+							<td>...</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td><strong>git diff tagname vs tagname</strong></td>
+							<td>Tag vs Tag</td>
+							<td>...</td>
+						</tr>
+						<!-- COMPARISONS : END -->
 						
+						<!-- STASH : START -->
+						<tr>
+							<td colspan="4" class="subtopic">STASH</td>
+						</tr>
+
+						<tr>
+							<td>1</td>
+							<td><strong>git stash </strong></td>
+							<td>Lưu toàn bộ nội dung công việc đang làm dở </td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>2</td>
+							<td><strong>git stash list</strong></td>
+							<td>Xem lại danh sách các lần lưu thay đổi</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>3</td>
+							<td><strong>git stash pop [stash@{1}]<br>git stash apply stash@{1}</strong></td>
+							<td>Áp dụng thay đổi từ stash</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>4</td>
+							<td><strong>git stash drop stash@{1}<br>git stash clear</strong></td>
+							<td>Xóa các thay đổi không cần thiết</td>
+							<td>...</td>
+						</tr>
+						<!-- STASH : END -->
+						
+						<!-- CẤU HÌNH P4MERGE : START -->
+						<tr>
+							<td colspan="4" class="subtopic">CẤU HÌNH P4MERGE (C:\Users\HaiLan\.gitconfig)</td>
+						</tr>
+
+						<tr>
+							<td>1</td>
+							<td><strong>Cấu hình difftool </strong></td>
+							<td>[diff]
+									tool = p4merge
+								[difftool "p4merge"]
+									path = C:\\Program Files\\Perforce\\p4merge.exe 
+								[merge]
+									tool = p4merge
+								[mergetool "p4merge"]
+									path = C:\\Program Files\\Perforce\\p4merge.exe
+									cmd = 'C:/Program Files/Perforce/p4merge.exe' $PWD/$BASE $PWD/$LOCAL $PWD/$REMOTE $PWD/$MERGED
+							</td>
+							<td>...</td>
+						</tr>
+
+						<tr>
+							<td>2</td>
+							<td><strong>Cấu hình mergetool </strong></td>
+							<td>
+								[merge]
+									tool = p4merge
+								[mergetool "p4merge"]
+									path = C:\\Program Files\\Perforce\\p4merge.exe
+									cmd = 'C:/Program Files/Perforce/p4merge.exe' $PWD/$BASE $PWD/$LOCAL $PWD/$REMOTE $PWD/$MERGED
+							</td>
+							<td>...</td>
+						</tr>
+						
+						</tr>
+						<!-- CẤU HÌNH P4MERGE : END -->
 
 					</tbody>
 				</table>
